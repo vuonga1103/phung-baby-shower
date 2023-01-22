@@ -5,8 +5,9 @@ import hotAirBalloonBear from './images/hot-air-balloon-bear.png'
 import Intro from './Intro'
 import Button from './Button'
 import RsvpForm from './RsvpForm'
-import { CORAL, GREEN, MOBILE_MEDIA_QUERY } from './utils'
 import Link from './Link'
+
+import { MOBILE_MEDIA_QUERY } from './utils'
 
 const AppWrapper = styled.div({
   height: '100vh',

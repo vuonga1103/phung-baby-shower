@@ -2,6 +2,7 @@ import { mix } from 'polished'
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
+
 import { GREEN } from './utils'
 
 const StyledButton = styled.button({
