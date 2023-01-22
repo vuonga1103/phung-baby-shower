@@ -1,12 +1,23 @@
+import { useState, useRef } from 'react'
 import styled from 'styled-components'
 
 import hotAirBalloonBear from './images/hot-air-balloon-bear.png'
+import Intro from './Intro'
+import RsvpButton from './RsvpButton'
+import RsvpForm from './RsvpForm'
+import { MOBILE_MEDIA_QUERY } from './utils'
 
 const AppWrapper = styled.div({
   height: '100vh',
   position: 'relative',
+})
+
+const Wrapper = styled.div({
   display: 'flex',
-  justifyContent: 'center',
+  flexDirection: 'column',
+  alignItems: 'center',
+  overflow: 'auto',
+  height: '100vh',
 })
 
 const BottomRightBear = styled.img({
@@ -15,30 +26,45 @@ const BottomRightBear = styled.img({
   right: 0,
   height: '60%',
   margin: 24,
-  '@media (max-width: 768px)': {
+  zIndex: -1,
+  [MOBILE_MEDIA_QUERY]: {
     display: 'none',
   },
 })
 
 const TopBear = styled.img({
   display: 'none',
-  '@media (max-width: 768px)': {
+  [MOBILE_MEDIA_QUERY]: {
     display: 'block',
     margin: 24,
     width: 250,
-    alignSelf: 'flex-start',
   },
 })
 
 function App() {
+  const [shouldOpenRsvpForm, setShouldOpenRsvpForm] = useState(false)
+  const containerRef = useRef(null)
+
+  const handleRsvpButtonClick = () => {
+    setShouldOpenRsvpForm(!shouldOpenRsvpForm)
+    setTimeout(() => {
+      containerRef.current.scrollTop = containerRef.current.scrollHeight
+    }, 50)
+  }
+
   return (
     <AppWrapper>
-      <TopBear src={hotAirBalloonBear} alt="Bear With Hot Air Balloon" />
+      <Wrapper ref={containerRef}>
+        <TopBear src={hotAirBalloonBear} alt="Bear With Hot Air Balloon" />
+        <Intro />
+        <RsvpButton onClick={handleRsvpButtonClick} />
+        {shouldOpenRsvpForm ? <RsvpForm /> : null}
 
-      <BottomRightBear
-        src={hotAirBalloonBear}
-        alt="Bear With Hot Air Balloon"
-      />
+        <BottomRightBear
+          src={hotAirBalloonBear}
+          alt="Bear With Hot Air Balloon"
+        />
+      </Wrapper>
     </AppWrapper>
   )
 }
