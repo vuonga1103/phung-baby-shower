@@ -34,6 +34,13 @@ const Text = styled.section({
   color: GREEN,
 })
 
+const JoinUsText = styled(Text)({
+  color: CORAL,
+  letterSpacing: 2,
+  fontSize: '1.5rem',
+  textTransform: 'none',
+})
+
 const Divider = styled.div({
   width: '40%',
   height: 1.5,
@@ -51,9 +58,7 @@ const Intro = () => {
   return (
     <Wrapper>
       <Title>It's a boy!</Title>
-      <Text style={{ color: CORAL, letterSpacing: 2, fontSize: '1.5rem' }}>
-        Join us in celebrating our newest adventure!
-      </Text>
+      <JoinUsText>Join us in celebrating our newest adventure!</JoinUsText>
 
       <Date>APRIL 12, 2023</Date>
       <Text style={{ marginTop: -24 }}>Saturday | 12 pm - 4pm</Text>

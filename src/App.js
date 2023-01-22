@@ -3,9 +3,10 @@ import styled from 'styled-components'
 
 import hotAirBalloonBear from './images/hot-air-balloon-bear.png'
 import Intro from './Intro'
-import RsvpButton from './RsvpButton'
+import Button from './Button'
 import RsvpForm from './RsvpForm'
-import { MOBILE_MEDIA_QUERY } from './utils'
+import { CORAL, GREEN, MOBILE_MEDIA_QUERY } from './utils'
+import Link from './Link'
 
 const AppWrapper = styled.div({
   height: '100vh',
@@ -57,7 +58,13 @@ function App() {
       <Wrapper ref={containerRef}>
         <TopBear src={hotAirBalloonBear} alt="Bear With Hot Air Balloon" />
         <Intro />
-        <RsvpButton onClick={handleRsvpButtonClick} />
+        <div>
+          <Button onClick={handleRsvpButtonClick}>RSVP Here</Button>
+          <Button>
+            <Link href="http://amazon.com">Baby Registry</Link>
+          </Button>
+        </div>
+
         {shouldOpenRsvpForm ? <RsvpForm /> : null}
 
         <BottomRightBear
