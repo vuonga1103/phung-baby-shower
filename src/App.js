@@ -27,6 +27,7 @@ const BottomRightBear = styled.img({
   bottom: 0,
   right: 0,
   height: '60%',
+  maxHeight: 450,
   margin: 24,
   zIndex: -1,
   [MOBILE_MEDIA_QUERY]: {
@@ -59,7 +60,7 @@ function App() {
       <Wrapper ref={containerRef}>
         <TopBear src={hotAirBalloonBear} alt="Bear With Hot Air Balloon" />
         <Intro />
-        <div>
+        <div style={{ marginBottom: 24 }}>
           <Button onClick={handleRsvpButtonClick}>RSVP Here</Button>
           <Button>
             <Link href="http://amazon.com">Baby Registry</Link>
