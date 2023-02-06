@@ -71,7 +71,7 @@ const Intro = () => {
       <JoinUsText>Join us in celebrating our newest adventure!</JoinUsText>
 
       <Date>APRIL 15, 2023</Date>
-      <Text style={{ marginTop: -20 }}>Saturday | 12 pm - 4pm</Text>
+      <Text style={{ marginTop: -20 }}>Saturday | 12 pm - 4 pm</Text>
       <Divider />
       <Address>
         <Link href="https://goo.gl/maps/JkS9pnrbaGn2G2ce7">
