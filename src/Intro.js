@@ -75,11 +75,7 @@ const Intro = () => {
       <Title>It's a boy!</Title>
       <JoinUsText>Join us in celebrating our newest adventure!</JoinUsText>
 
-      <Date>
-        <Link href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NGN1MWtrcnVnNG45Y211Mjh0ZnVucG1wc2UgdnVvbmdhbmh0QG0&amp;tmsrc=vuonganht%40gmail.com">
-          APRIL 15, 2023
-        </Link>
-      </Date>
+      <Date>APRIL 15, 2023</Date>
       <Text style={{ marginTop: -20 }}>Saturday | 12 pm - 4pm</Text>
       <Divider />
       <Address>
