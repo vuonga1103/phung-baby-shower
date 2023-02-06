@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { transparentize } from 'polished'
+import { mix, transparentize } from 'polished'
 
 import { BLUE, CORAL, GREEN, MOBILE_MEDIA_QUERY } from './utils'
+import Link from './Link'
 
 const Wrapper = styled.div({
   margin: '12px 24px',
@@ -48,10 +49,24 @@ const Divider = styled.div({
   margin: '8px 0 0',
 })
 
+const underlineStyle = {
+  textDecoration: 'underline',
+  textDecorationStyle: 'dotted',
+  '&:hover': {
+    color: mix(0.15, 'black', GREEN),
+  },
+}
+
 const Date = styled.h2({
   fontSize: '1.5rem',
   fontWeight: 700,
   color: GREEN,
+  ...underlineStyle,
+})
+
+const Address = styled(Text)({
+  marginTop: 12,
+  ...underlineStyle,
 })
 
 const Intro = () => {
@@ -60,11 +75,21 @@ const Intro = () => {
       <Title>It's a boy!</Title>
       <JoinUsText>Join us in celebrating our newest adventure!</JoinUsText>
 
-      <Date>APRIL 12, 2023</Date>
-      <Text style={{ marginTop: -24 }}>Saturday | 12 pm - 4pm</Text>
+      <Date>
+        <Link href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=NGN1MWtrcnVnNG45Y211Mjh0ZnVucG1wc2UgdnVvbmdhbmh0QG0&amp;tmsrc=vuonganht%40gmail.com">
+          APRIL 15, 2023
+        </Link>
+      </Date>
+      <Text style={{ marginTop: -20 }}>Saturday | 12 pm - 4pm</Text>
       <Divider />
-      <Text style={{ marginTop: 12 }}>1901 Emmons Ave</Text>
-      <Text>Brooklyn, NY 11235</Text>
+      <Address>
+        <Link href="https://goo.gl/maps/JkS9pnrbaGn2G2ce7">
+          Gino's <br />
+          7414 Fifth Avenue
+          <br />
+          Brooklyn, NY 11209
+        </Link>
+      </Address>
     </Wrapper>
   )
 }

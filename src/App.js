@@ -63,7 +63,9 @@ function App() {
         <div style={{ marginBottom: 24 }}>
           <Button onClick={handleRsvpButtonClick}>RSVP Here</Button>
           <Button>
-            <Link href="http://amazon.com">Baby Registry</Link>
+            <Link href="https://www.myregistry.com/giftlist/phungandgarrybaby">
+              Baby Registry
+            </Link>
           </Button>
         </div>
 
