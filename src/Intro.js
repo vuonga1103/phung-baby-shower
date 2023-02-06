@@ -75,7 +75,8 @@ const Intro = () => {
       <Divider />
       <Address>
         <Link href="https://goo.gl/maps/JkS9pnrbaGn2G2ce7">
-          Gino's <br />
+          Gino's Restaurant
+          <br />
           7414 Fifth Avenue
           <br />
           Brooklyn, NY 11209
