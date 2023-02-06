@@ -49,24 +49,19 @@ const Divider = styled.div({
   margin: '8px 0 0',
 })
 
-const underlineStyle = {
+const Date = styled.h2({
+  fontSize: '1.5rem',
+  fontWeight: 700,
+  color: GREEN,
+})
+
+const Address = styled(Text)({
+  marginTop: 12,
   textDecoration: 'underline',
   textDecorationStyle: 'dotted',
   '&:hover': {
     color: mix(0.15, 'black', GREEN),
   },
-}
-
-const Date = styled.h2({
-  fontSize: '1.5rem',
-  fontWeight: 700,
-  color: GREEN,
-  ...underlineStyle,
-})
-
-const Address = styled(Text)({
-  marginTop: 12,
-  ...underlineStyle,
 })
 
 const Intro = () => {
